@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MasicotAI · AI/Tech Fund Intelligence Q4 2025</title>
+<meta name="description" content="Cross-fund 13F analysis of 11 elite AI/tech hedge funds. Consensus holdings, conviction bets, and Q3→Q4 institutional flows.">
+<meta property="og:title" content="MasicotAI · AI/Tech Fund Intelligence Q4 2025">
+<meta property="og:description" content="What 11 elite AI/tech funds are buying and selling. Cross-fund consensus, conviction scores, and quarterly movements.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MasicotAI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05070a;--sf:#0a0d14;--cd:#0d1119;--ch:#111622;--el:#141a26;--br:#1a2035;--bl:#222d45;--gd:#c9a84c;--gl:#dfc06a;--gdb:rgba(201,168,76,.08);--tp:#e8eaef;--ts:#8891a5;--tm:#4a5268;--gn:#22c55e;--rd:#ef4444;--am:#f59e0b;--bu:#3b82f6;--pu:#8b5cf6;--pk:#ec4899;--cy:#06b6d4;--or:#f97316;--tl:#14b8a6;--mn:'JetBrains Mono',monospace;--dp:'Playfair Display',serif;--sn:'DM Sans',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tp);font-family:var(--mn);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(201,168,76,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.012) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gd),transparent);z-index:100}
+.wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:32px 24px}
+.hd{margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--br)}
+.hd h1{font-family:var(--sn);font-size:28px;font-weight:700;color:#fff;letter-spacing:-.5px;margin-bottom:4px}
+.hd .sub{font-size:12px;color:var(--tm);letter-spacing:.3px}
+.hd .qt{display:inline-block;background:var(--gdb);border:1px solid rgba(201,168,76,.2);border-radius:6px;padding:4px 12px;font-size:11px;color:var(--gd);font-weight:600;margin-bottom:10px}
+.kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:28px}
+@media(max-width:900px){.kpi{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.kpi{grid-template-columns:1fr}.tabs{flex-wrap:wrap}}
+.kc{background:var(--cd);border:1px solid var(--br);border-radius:10px;padding:16px}
+.kc .kl{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--tm);margin-bottom:6px}
+.kc .kv{font-size:24px;font-weight:700;color:#fff}
+.kc .ks{font-size:11px;color:var(--tm);margin-top:3px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--br);margin-bottom:24px}
+.tab{padding:10px 18px;cursor:pointer;background:0;color:var(--tm);border:none;border-bottom:2px solid transparent;font-family:var(--mn);font-size:12px;font-weight:400;letter-spacing:.5px;text-transform:uppercase;transition:all .2s}
+.tab:hover{color:var(--ts)}
+.tab.on{color:var(--tp);font-weight:700;border-bottom-color:var(--gd)}
+.card{background:var(--cd);border:1px solid var(--br);border-radius:10px;padding:20px;margin-bottom:14px}
+.card.al{border-left:3px solid}
+.cl{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--tm);margin-bottom:8px}
+.gs{width:40px;height:2px;background:linear-gradient(90deg,var(--gd),transparent);margin:12px 0}
+.at{font-family:var(--sn);font-size:14px;line-height:1.75;color:var(--ts)}
+.at strong{color:var(--tp)}
+.at p{margin-bottom:12px}.at p:last-child{margin-bottom:0}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{padding:10px 6px;color:var(--tm);font-size:10px;text-transform:uppercase;letter-spacing:.5px;font-weight:600;border-bottom:2px solid var(--br)}
+.tbl td{padding:9px 6px;border-bottom:1px solid rgba(26,32,53,.6)}
+.tbl tr:hover td{background:var(--ch)}
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:.5px}
+.tg{background:rgba(34,197,94,.12);color:var(--gn)}
+.tr{background:rgba(239,68,68,.12);color:var(--rd)}
+.tb{background:rgba(59,130,246,.12);color:var(--bu)}
+.ta{background:rgba(245,158,11,.12);color:var(--am)}
+.tp{background:rgba(139,92,246,.12);color:var(--pu)}
+.tc{background:rgba(6,182,212,.12);color:var(--cy)}
+.bt{height:6px;background:var(--el);border-radius:3px;overflow:hidden;flex:1}
+.bf{height:100%;border-radius:3px;transition:width .4s}
+.mv{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--br);font-size:12px}
+.mv:last-child{border-bottom:none}
+.pane{display:none}.pane.on{display:block}
+.fade{animation:fi .3s ease both}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.fund-card{background:var(--cd);border:1px solid var(--br);border-radius:10px;padding:16px;cursor:pointer;transition:all .2s;border-left:3px solid var(--tm)}
+.fund-card:hover,.fund-card.on{border-left-color:var(--gd);background:var(--ch)}
+.fund-card .fn{font-family:var(--sn);font-size:15px;font-weight:700;color:#fff}
+.fund-card .fm{font-size:11px;color:var(--tm);margin-top:2px}
+.fg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:20px}
+.bl{margin-top:32px;padding:20px;background:var(--cd);border:1px solid var(--br);border-radius:10px;border-top:2px solid var(--gd)}
+.ft{margin-top:48px;padding-top:20px;border-top:1px solid var(--br);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--tm)}
+.ft a{color:var(--gd);text-decoration:none}
+.sec-bar{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sec-label{width:130px;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sec-val{width:50px;text-align:right;font-size:11px;color:var(--ts)}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:768px){.mg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hd">
+<div class="qt">Q4 2025 · FREE</div>
+<h1>AI / Tech Fund Intelligence</h1>
+<div class="sub">Cross-fund 13F analysis · 11 elite hedge funds · $225B tracked AUM · Q3 → Q4 2025 movements</div>
+</header>
+<div id="kpis"></div>
+<div class="tabs" id="tabs"></div>
+<div id="content"></div>
+<div class="bl" id="bottomline"></div>
+<footer class="ft">
+<span>MasicotAI Research · Data from SEC EDGAR 13F filings · Not financial advice</span>
+<span>Follow <a href="https://x.com/MasicotAI" target="_blank">@MasicotAI</a></span>
+</footer>
+</div>
+<script>
+const D={"m":{"q":"Q4 2025","nf":11,"aum":225.1},"fs":[{"name":"Alkeon","q4_aum":63.13,"q3_aum":67.97,"q4_pos":201,"q3_pos":188,"chg":-7.1},{"name":"Altimeter","q4_aum":6.66,"q3_aum":7.58,"q4_pos":18,"q3_pos":23,"chg":-12.1},{"name":"Coatue","q4_aum":39.96,"q3_aum":40.79,"q4_pos":257,"q3_pos":258,"chg":-2.0},{"name":"D1 Capital","q4_aum":10.7,"q3_aum":8.71,"q4_pos":42,"q3_pos":38,"chg":22.8},{"name":"Dragoneer","q4_aum":4.59,"q3_aum":4.53,"q4_pos":27,"q3_pos":26,"chg":1.3},{"name":"Durable Capital","q4_aum":10.57,"q3_aum":13.5,"q4_pos":40,"q3_pos":48,"chg":-21.7},{"name":"Light Street","q4_aum":0.65,"q3_aum":0.59,"q4_pos":24,"q3_pos":27,"chg":10.2},{"name":"Lone Pine","q4_aum":13.61,"q3_aum":13.74,"q4_pos":32,"q3_pos":25,"chg":-0.9},{"name":"Tiger Global","q4_aum":29.71,"q3_aum":32.36,"q4_pos":54,"q3_pos":56,"chg":-8.2},{"name":"Viking Global","q4_aum":37.68,"q3_aum":38.5,"q4_pos":76,"q3_pos":78,"chg":-2.1},{"name":"Whale Rock","q4_aum":7.82,"q3_aum":8.49,"q4_pos":32,"q3_pos":36,"chg":-7.9}],"con":[{"i":"AMAZON COM INC","s":"Mega-Cap Tech","fc":9,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","D1 Capital","Viking Global","Whale Rock","Light Street","Alkeon"],"v":8.97,"aw":4.55,"mw":7.78,"cs":40.9},{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","fc":8,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","Viking Global","Whale Rock","Light Street","Alkeon"],"v":9.12,"aw":5.65,"mw":12.55,"cs":45.2},{"i":"NVIDIA CORPORATION","s":"AI / Semis","fc":8,"f":["Altimeter","Tiger Global","Coatue","D1 Capital","Whale Rock","Light Street","Dragoneer","Alkeon"],"v":7.71,"aw":7.69,"mw":22.68,"cs":61.5},{"i":"BROADCOM INC","s":"AI / Semis","fc":8,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","D1 Capital","Whale Rock","Light Street","Alkeon"],"v":4.39,"aw":3.33,"mw":7.66,"cs":26.6},{"i":"ALPHABET INC","s":"Mega-Cap Tech","fc":7,"f":["Altimeter","Tiger Global","Coatue","Viking Global","Whale Rock","Light Street","Alkeon"],"v":9.77,"aw":5.83,"mw":11.2,"cs":40.8},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","fc":6,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","Viking Global","Alkeon"],"v":9.6,"aw":5.94,"mw":9.27,"cs":35.6},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","fc":6,"f":["Altimeter","Tiger Global","Coatue","D1 Capital","Whale Rock","Alkeon"],"v":7.4,"aw":6.5,"mw":18.28,"cs":39.0},{"i":"APPLOVIN CORP","s":"AI / Software","fc":6,"f":["Tiger Global","Lone Pine","Coatue","D1 Capital","Whale Rock","Durable Capital"],"v":3.98,"aw":3.78,"mw":6.97,"cs":22.7},{"i":"CARVANA CO","s":"Platform / Mktplace","fc":6,"f":["Lone Pine","Coatue","Viking Global","Whale Rock","Dragoneer","Durable Capital"],"v":3.28,"aw":4.54,"mw":9.01,"cs":27.2},{"i":"MERCADOLIBRE INC","s":"Platform / Mktplace","fc":6,"f":["Altimeter","D1 Capital","Whale Rock","Dragoneer","Durable Capital","Alkeon"],"v":2.22,"aw":3.75,"mw":7.04,"cs":22.5},{"i":"DOORDASH INC","s":"Platform / Mktplace","fc":5,"f":["Tiger Global","Lone Pine","Coatue","Durable Capital","Alkeon"],"v":2.98,"aw":3.07,"mw":7.67,"cs":15.3},{"i":"REDDIT INC","s":"Platform / Mktplace","fc":5,"f":["Tiger Global","Coatue","D1 Capital","Light Street","Alkeon"],"v":2.76,"aw":2.81,"mw":4.55,"cs":14.1},{"i":"NU HLDGS LTD","s":"Fintech","fc":5,"f":["Tiger Global","Lone Pine","Coatue","Whale Rock","Dragoneer"],"v":1.71,"aw":2.06,"mw":3.64,"cs":10.3},{"i":"MEDLINE INC","s":"Healthcare","fc":5,"f":["Lone Pine","D1 Capital","Viking Global","Dragoneer","Durable Capital"],"v":1.11,"aw":1.55,"mw":3.62,"cs":7.8},{"i":"CHIME FINL INC","s":"Fintech","fc":5,"f":["Tiger Global","Coatue","Whale Rock","Light Street","Dragoneer"],"v":0.89,"aw":3.41,"mw":10.5,"cs":17.1},{"i":"SPOTIFY TECHNOLOGY S A","s":"Platform / Mktplace","fc":4,"f":["Tiger Global","Lone Pine","Coatue","D1 Capital"],"v":2.4,"aw":2.06,"mw":3.56,"cs":8.2},{"i":"COUPANG INC","s":"Platform / Mktplace","fc":4,"f":["Altimeter","Tiger Global","Dragoneer","Durable Capital"],"v":2.08,"aw":6.05,"mw":11.1,"cs":24.2},{"i":"ADVANCED MICRO DEVICES INC","s":"AI / Semis","fc":4,"f":["Coatue","Viking Global","Light Street","Alkeon"],"v":1.92,"aw":2.82,"mw":7.23,"cs":11.3},{"i":"SHERWIN WILLIAMS CO","s":"Industrials","fc":4,"f":["Tiger Global","D1 Capital","Viking Global","Alkeon"],"v":1.52,"aw":1.52,"mw":2.91,"cs":6.1},{"i":"FIGMA INC","s":"Other","fc":4,"f":["Tiger Global","Viking Global","Dragoneer","Durable Capital"],"v":0.3,"aw":0.39,"mw":0.61,"cs":1.6},{"i":"LAM RESEARCH CORP","s":"AI / Semis","fc":3,"f":["Tiger Global","Coatue","Alkeon"],"v":4.13,"aw":3.09,"mw":4.2,"cs":9.3},{"i":"SEA LTD","s":"Platform / Mktplace","fc":3,"f":["Tiger Global","D1 Capital","Viking Global"],"v":2.88,"aw":4.01,"mw":6.62,"cs":12.0},{"i":"CONSTELLATION ENERGY CORP","s":"Energy / Infra","fc":3,"f":["Coatue","Light Street","Alkeon"],"v":2.59,"aw":3.14,"mw":5.22,"cs":9.4},{"i":"TESLA INC","s":"Energy / EV","fc":3,"f":["Coatue","Viking Global","Alkeon"],"v":1.95,"aw":1.53,"mw":2.03,"cs":4.6},{"i":"VISA INC","s":"Fintech","fc":3,"f":["Lone Pine","Viking Global","Alkeon"],"v":1.92,"aw":1.52,"mw":3.71,"cs":4.6}],"cv":[{"i":"NVIDIA CORPORATION","s":"AI / Semis","fc":8,"f":["Altimeter","Tiger Global","Coatue","D1 Capital","Whale Rock","Light Street","Dragoneer","Alkeon"],"v":7.71,"aw":7.69,"mw":22.68,"cs":61.5},{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","fc":8,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","Viking Global","Whale Rock","Light Street","Alkeon"],"v":9.12,"aw":5.65,"mw":12.55,"cs":45.2},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","fc":9,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","D1 Capital","Viking Global","Whale Rock","Light Street","Alkeon"],"v":8.97,"aw":4.55,"mw":7.78,"cs":40.9},{"i":"ALPHABET INC","s":"Mega-Cap Tech","fc":7,"f":["Altimeter","Tiger Global","Coatue","Viking Global","Whale Rock","Light Street","Alkeon"],"v":9.77,"aw":5.83,"mw":11.2,"cs":40.8},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","fc":6,"f":["Altimeter","Tiger Global","Coatue","D1 Capital","Whale Rock","Alkeon"],"v":7.4,"aw":6.5,"mw":18.28,"cs":39.0},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","fc":6,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","Viking Global","Alkeon"],"v":9.6,"aw":5.94,"mw":9.27,"cs":35.6},{"i":"CARVANA CO","s":"Platform / Mktplace","fc":6,"f":["Lone Pine","Coatue","Viking Global","Whale Rock","Dragoneer","Durable Capital"],"v":3.28,"aw":4.54,"mw":9.01,"cs":27.2},{"i":"BROADCOM INC","s":"AI / Semis","fc":8,"f":["Altimeter","Tiger Global","Lone Pine","Coatue","D1 Capital","Whale Rock","Light Street","Alkeon"],"v":4.39,"aw":3.33,"mw":7.66,"cs":26.6},{"i":"COUPANG INC","s":"Platform / Mktplace","fc":4,"f":["Altimeter","Tiger Global","Dragoneer","Durable Capital"],"v":2.08,"aw":6.05,"mw":11.1,"cs":24.2},{"i":"APPLOVIN CORP","s":"AI / Software","fc":6,"f":["Tiger Global","Lone Pine","Coatue","D1 Capital","Whale Rock","Durable Capital"],"v":3.98,"aw":3.78,"mw":6.97,"cs":22.7},{"i":"MERCADOLIBRE INC","s":"Platform / Mktplace","fc":6,"f":["Altimeter","D1 Capital","Whale Rock","Dragoneer","Durable Capital","Alkeon"],"v":2.22,"aw":3.75,"mw":7.04,"cs":22.5},{"i":"CHIME FINL INC","s":"Fintech","fc":5,"f":["Tiger Global","Coatue","Whale Rock","Light Street","Dragoneer"],"v":0.89,"aw":3.41,"mw":10.5,"cs":17.1},{"i":"DOORDASH INC","s":"Platform / Mktplace","fc":5,"f":["Tiger Global","Lone Pine","Coatue","Durable Capital","Alkeon"],"v":2.98,"aw":3.07,"mw":7.67,"cs":15.3},{"i":"REDDIT INC","s":"Platform / Mktplace","fc":5,"f":["Tiger Global","Coatue","D1 Capital","Light Street","Alkeon"],"v":2.76,"aw":2.81,"mw":4.55,"cs":14.1},{"i":"SEA LTD","s":"Platform / Mktplace","fc":3,"f":["Tiger Global","D1 Capital","Viking Global"],"v":2.88,"aw":4.01,"mw":6.62,"cs":12.0},{"i":"ADVANCED MICRO DEVICES INC","s":"AI / Semis","fc":4,"f":["Coatue","Viking Global","Light Street","Alkeon"],"v":1.92,"aw":2.82,"mw":7.23,"cs":11.3},{"i":"NU HLDGS LTD","s":"Fintech","fc":5,"f":["Tiger Global","Lone Pine","Coatue","Whale Rock","Dragoneer"],"v":1.71,"aw":2.06,"mw":3.64,"cs":10.3},{"i":"CLEAN HARBORS INC","s":"Industrials","fc":3,"f":["Lone Pine","D1 Capital","Durable Capital"],"v":1.17,"aw":3.44,"mw":6.09,"cs":10.3},{"i":"CONSTELLATION ENERGY CORP","s":"Energy / Infra","fc":3,"f":["Coatue","Light Street","Alkeon"],"v":2.59,"aw":3.14,"mw":5.22,"cs":9.4},{"i":"LAM RESEARCH CORP","s":"AI / Semis","fc":3,"f":["Tiger Global","Coatue","Alkeon"],"v":4.13,"aw":3.09,"mw":4.2,"cs":9.3},{"i":"JFROG LTD","s":"Other","fc":3,"f":["Whale Rock","Light Street","Alkeon"],"v":0.39,"aw":2.9,"mw":4.44,"cs":8.7},{"i":"SPOTIFY TECHNOLOGY S A","s":"Platform / Mktplace","fc":4,"f":["Tiger Global","Lone Pine","Coatue","D1 Capital"],"v":2.4,"aw":2.06,"mw":3.56,"cs":8.2},{"i":"CAPITAL ONE FINL CORP","s":"Fintech","fc":3,"f":["Lone Pine","D1 Capital","Viking Global"],"v":1.47,"aw":2.62,"mw":4.09,"cs":7.9},{"i":"MEDLINE INC","s":"Healthcare","fc":5,"f":["Lone Pine","D1 Capital","Viking Global","Dragoneer","Durable Capital"],"v":1.11,"aw":1.55,"mw":3.62,"cs":7.8},{"i":"API GROUP CORP","s":"Industrials","fc":3,"f":["D1 Capital","Viking Global","Durable Capital"],"v":1.1,"aw":2.47,"mw":5.44,"cs":7.4}],"buys":[{"i":"MEDLINE INC","s":"Healthcare","net":5,"a":0,"t":0,"n":5,"e":0,"af":[],"tf":[],"nf":["Lone Pine","Viking Global","Dragoneer","Durable Capital","D1 Capital"],"ef":[],"vc":1.11,"act":5},{"i":"MERCADOLIBRE INC","s":"Platform / Mktplace","net":5,"a":5,"t":0,"n":0,"e":0,"af":["Dragoneer","Whale Rock","Durable Capital","Altimeter","D1 Capital"],"tf":[],"nf":[],"ef":[],"vc":0.47,"act":5},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","net":3,"a":4,"t":3,"n":2,"e":0,"af":["Whale Rock","Light Street","Altimeter","Coatue"],"tf":["Tiger Global","Alkeon","Lone Pine"],"nf":["Viking Global","D1 Capital"],"ef":[],"vc":0.95,"act":9},{"i":"NAVAN INC","s":"Enterprise","net":3,"a":0,"t":0,"n":3,"e":0,"af":[],"tf":[],"nf":["Dragoneer","Alkeon","Coatue"],"ef":[],"vc":0.09,"act":3},{"i":"SPOTIFY TECHNOLOGY S A","s":"Platform / Mktplace","net":3,"a":1,"t":0,"n":2,"e":0,"af":["Coatue"],"tf":[],"nf":["D1 Capital","Lone Pine"],"ef":[],"vc":0.26,"act":3},{"i":"CONSTELLATION ENERGY CORP","s":"Energy / Infra","net":3,"a":3,"t":0,"n":0,"e":0,"af":["Coatue","Light Street","Alkeon"],"tf":[],"nf":[],"ef":[],"vc":0.35,"act":3},{"i":"CLEAN HARBORS INC","s":"Industrials","net":3,"a":2,"t":0,"n":1,"e":0,"af":["D1 Capital","Durable Capital"],"tf":[],"nf":["Lone Pine"],"ef":[],"vc":0.47,"act":3},{"i":"WEALTHFRONT CORP","s":"Fintech","net":3,"a":0,"t":0,"n":3,"e":0,"af":[],"tf":[],"nf":["Tiger Global","Dragoneer","Whale Rock"],"ef":[],"vc":0.24,"act":3},{"i":"CARVANA CO","s":"Platform / Mktplace","net":2,"a":4,"t":2,"n":0,"e":0,"af":["Durable Capital","Lone Pine","Dragoneer","Whale Rock"],"tf":["Coatue","Viking Global"],"nf":[],"ef":[],"vc":0.26,"act":6},{"i":"DISNEY WALT CO","s":"Media / Consumer","net":2,"a":2,"t":0,"n":0,"e":0,"af":["D1 Capital","Viking Global"],"tf":[],"nf":[],"ef":[],"vc":0.19,"act":2},{"i":"QNITY ELECTRONICS INC","s":"AI / Semis","net":2,"a":0,"t":0,"n":2,"e":0,"af":[],"tf":[],"nf":["D1 Capital","Durable Capital"],"ef":[],"vc":0.31,"act":2},{"i":"NVIDIA CORPORATION","s":"AI / Semis","net":2,"a":5,"t":3,"n":0,"e":0,"af":["Dragoneer","Altimeter","Alkeon","D1 Capital","Light Street"],"tf":["Tiger Global","Whale Rock","Coatue"],"nf":[],"ef":[],"vc":0.14,"act":8},{"i":"TWILIO INC","s":"Cloud / SaaS","net":2,"a":0,"t":0,"n":2,"e":0,"af":[],"tf":[],"nf":["Durable Capital","Alkeon"],"ef":[],"vc":0.17,"act":2},{"i":"ALPHABET INC","s":"Mega-Cap Tech","net":2,"a":3,"t":2,"n":1,"e":0,"af":["Altimeter","Whale Rock","Light Street"],"tf":["Alkeon","Coatue"],"nf":["Viking Global"],"ef":[],"vc":2.63,"act":6},{"i":"ROCKET COS INC","s":"Fintech","net":2,"a":1,"t":0,"n":1,"e":0,"af":["Durable Capital"],"tf":[],"nf":["Coatue"],"ef":[],"vc":0.26,"act":2},{"i":"DOORDASH INC","s":"Platform / Mktplace","net":2,"a":2,"t":1,"n":1,"e":0,"af":["Coatue","Durable Capital"],"tf":["Alkeon"],"nf":["Lone Pine"],"ef":[],"vc":0.47,"act":4},{"i":"NISOURCE INC","s":"Other","net":2,"a":1,"t":0,"n":1,"e":0,"af":["Alkeon"],"tf":[],"nf":["D1 Capital"],"ef":[],"vc":0.05,"act":2},{"i":"VISA INC","s":"Fintech","net":2,"a":1,"t":0,"n":1,"e":0,"af":["Viking Global"],"tf":[],"nf":["Lone Pine"],"ef":[],"vc":0.43,"act":2},{"i":"SERVICENOW INC","s":"Cloud / SaaS","net":2,"a":1,"t":0,"n":1,"e":0,"af":["Tiger Global"],"tf":[],"nf":["Alkeon"],"ef":[],"vc":0.06,"act":2},{"i":"NETFLIX INC","s":"Media / Consumer","net":1,"a":2,"t":0,"n":1,"e":2,"af":["Tiger Global","Coatue"],"tf":[],"nf":["Light Street"],"ef":["Whale Rock","Viking Global"],"vc":-0.6,"act":5}],"sells":[{"i":"APPLOVIN CORP","s":"AI / Software","net":-7,"a":0,"t":6,"n":0,"e":1,"af":[],"tf":["Durable Capital","Tiger Global","D1 Capital","Lone Pine","Whale Rock","Coatue"],"nf":[],"ef":["Viking Global"],"vc":-1.44,"act":7},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","net":-6,"a":1,"t":5,"n":0,"e":2,"af":["D1 Capital"],"tf":["Altimeter","Alkeon","Whale Rock","Coatue","Tiger Global"],"nf":[],"ef":["Lone Pine","Viking Global"],"vc":-3.35,"act":8},{"i":"BROADCOM INC","s":"AI / Semis","net":-4,"a":2,"t":6,"n":0,"e":0,"af":["Lone Pine","Light Street"],"tf":["Alkeon","D1 Capital","Coatue","Tiger Global","Altimeter","Whale Rock"],"nf":[],"ef":[],"vc":-0.71,"act":8},{"i":"PHILIP MORRIS INTL INC","s":"Consumer","net":-3,"a":0,"t":1,"n":0,"e":2,"af":[],"tf":["Lone Pine"],"nf":[],"ef":["D1 Capital","Viking Global"],"vc":-1.16,"act":3},{"i":"ALIBABA GROUP HLDG LTD","s":"Other","net":-3,"a":0,"t":0,"n":0,"e":3,"af":[],"tf":[],"nf":[],"ef":["Altimeter","Coatue","Light Street"],"vc":-0.55,"act":3},{"i":"CAPITAL ONE FINL CORP","s":"Fintech","net":-3,"a":0,"t":3,"n":0,"e":0,"af":[],"tf":["D1 Capital","Lone Pine","Viking Global"],"nf":[],"ef":[],"vc":-0.85,"act":3},{"i":"SEA LTD","s":"Platform / Mktplace","net":-3,"a":2,"t":1,"n":0,"e":4,"af":["D1 Capital","Viking Global"],"tf":["Tiger Global"],"nf":[],"ef":["Lone Pine","Whale Rock","Coatue","Light Street"],"vc":-1.43,"act":7},{"i":"INTUIT","s":"Software","net":-3,"a":0,"t":0,"n":0,"e":3,"af":[],"tf":[],"nf":[],"ef":["Coatue","Viking Global","Durable Capital"],"vc":-1.05,"act":3},{"i":"NU HLDGS LTD","s":"Fintech","net":-2,"a":1,"t":2,"n":0,"e":1,"af":["Lone Pine"],"tf":["Whale Rock","Coatue"],"nf":[],"ef":["D1 Capital"],"vc":-0.07,"act":4},{"i":"COSTAR GROUP INC","s":"Other","net":-2,"a":0,"t":2,"n":0,"e":0,"af":[],"tf":["Viking Global","Tiger Global"],"nf":[],"ef":[],"vc":-0.18,"act":2},{"i":"SCHWAB CHARLES CORP","s":"Fintech","net":-2,"a":0,"t":2,"n":0,"e":0,"af":[],"tf":["D1 Capital","Viking Global"],"nf":[],"ef":[],"vc":-0.25,"act":2},{"i":"FIGMA INC","s":"Other","net":-2,"a":0,"t":1,"n":1,"e":2,"af":[],"tf":["Durable Capital"],"nf":["Viking Global"],"ef":["Alkeon","Coatue"],"vc":-0.2,"act":4},{"i":"VIA TRANSN INC","s":"Other","net":-2,"a":0,"t":0,"n":0,"e":2,"af":[],"tf":[],"nf":[],"ef":["Durable Capital","Tiger Global"],"vc":-0.01,"act":2},{"i":"MAPLEBEAR INC","s":"Platform / Mktplace","net":-2,"a":0,"t":0,"n":0,"e":2,"af":[],"tf":[],"nf":[],"ef":["Viking Global","Altimeter"],"vc":0.03,"act":2},{"i":"GE VERNOVA INC","s":"Energy / Infra","net":-2,"a":0,"t":2,"n":0,"e":0,"af":[],"tf":["Tiger Global","Coatue"],"nf":[],"ef":[],"vc":-0.11,"act":2},{"i":"MONGODB INC","s":"Cloud / SaaS","net":-2,"a":1,"t":1,"n":0,"e":2,"af":["Whale Rock"],"tf":["Alkeon"],"nf":[],"ef":["Tiger Global","Light Street"],"vc":-0.06,"act":4},{"i":"CELESTICA INC","s":"AI / Semis","net":-2,"a":0,"t":2,"n":0,"e":0,"af":[],"tf":["Viking Global","Whale Rock"],"nf":[],"ef":[],"vc":-0.1,"act":2},{"i":"BANK AMERICA CORP","s":"Other","net":-2,"a":0,"t":2,"n":0,"e":0,"af":[],"tf":["Viking Global","D1 Capital"],"nf":[],"ef":[],"vc":-0.56,"act":2},{"i":"ORACLE CORP","s":"Other","net":-2,"a":0,"t":2,"n":0,"e":0,"af":[],"tf":["Alkeon","Coatue"],"nf":[],"ef":[],"vc":-0.92,"act":2},{"i":"CIENA CORP","s":"Other","net":-2,"a":0,"t":1,"n":0,"e":1,"af":[],"tf":["Whale Rock"],"nf":[],"ef":["Lone Pine"],"vc":-0.28,"act":2}],"sl":[{"s":"Other","v":66.7,"p":34.2,"h":278,"f":11},{"s":"Mega-Cap Tech","v":36.4,"p":18.7,"h":30,"f":9},{"s":"AI / Semis","v":31.6,"p":16.2,"h":44,"f":11},{"s":"Platform / Mktplace","v":22.4,"p":11.5,"h":44,"f":11},{"s":"Fintech","v":10.8,"p":5.5,"h":27,"f":10},{"s":"Energy / Infra","v":6.7,"p":3.4,"h":9,"f":7},{"s":"Industrials","v":5.9,"p":3.0,"h":13,"f":6},{"s":"AI / Software","v":4.0,"p":2.0,"h":6,"f":6},{"s":"Media / Consumer","v":2.8,"p":1.4,"h":5,"f":5},{"s":"Cloud / SaaS","v":2.1,"p":1.1,"h":12,"f":8},{"s":"Energy / EV","v":2.0,"p":1.0,"h":3,"f":3},{"s":"Healthcare","v":1.6,"p":0.8,"h":7,"f":6},{"s":"Financials","v":0.7,"p":0.4,"h":1,"f":1},{"s":"Software","v":0.5,"p":0.2,"h":1,"f":1},{"s":"Consumer","v":0.4,"p":0.2,"h":1,"f":1},{"s":"Enterprise","v":0.4,"p":0.2,"h":4,"f":3},{"s":"AI Infra","v":0.2,"p":0.1,"h":1,"f":1}],"ft":{"Alkeon":[{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":3.66,"v":2.31},{"i":"ALPHABET INC","s":"Mega-Cap Tech","w":3.12,"v":1.97},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","w":2.89,"v":1.82},{"i":"LAM RESEARCH CORP","s":"AI / Semis","w":2.83,"v":1.78},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","w":2.66,"v":1.68},{"i":"NVIDIA CORPORATION","s":"AI / Semis","w":2.28,"v":1.44},{"i":"KLA CORP","s":"Other","w":2.14,"v":1.35},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","w":2.08,"v":1.32},{"i":"BOOKING HOLDINGS INC","s":"Other","w":1.48,"v":0.94},{"i":"ADVANCED MICRO DEVICES INC","s":"AI / Semis","w":1.27,"v":0.8}],"Altimeter":[{"i":"NVIDIA CORPORATION","s":"AI / Semis","w":22.68,"v":1.51},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","w":18.28,"v":1.22},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","w":9.27,"v":0.62},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","w":7.68,"v":0.51},{"i":"UBER TECHNOLOGIES INC","s":"Platform / Mktplace","w":6.85,"v":0.46},{"i":"SNOWFLAKE INC","s":"Cloud / SaaS","w":6.68,"v":0.44},{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":5.56,"v":0.37},{"i":"COUPANG INC","s":"Platform / Mktplace","w":5.55,"v":0.37},{"i":"COREWEAVE INC","s":"AI Infra","w":3.45,"v":0.23},{"i":"CONFLUENT INC","s":"Cloud / SaaS","w":3.15,"v":0.21}],"Coatue":[{"i":"ALPHABET INC","s":"Mega-Cap Tech","w":6.93,"v":2.77},{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":6.56,"v":2.62},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","w":6.26,"v":2.5},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","w":6.25,"v":2.5},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","w":5.74,"v":2.29},{"i":"GE VERNOVA INC","s":"Energy / Infra","w":5.51,"v":2.2},{"i":"CONSTELLATION ENERGY CORP","s":"Energy / Infra","w":5.22,"v":2.09},{"i":"BROADCOM INC","s":"AI / Semis","w":4.77,"v":1.91},{"i":"NVIDIA CORPORATION","s":"AI / Semis","w":4.29,"v":1.72},{"i":"LAM RESEARCH CORP","s":"AI / Semis","w":4.2,"v":1.68}],"D1 Capital":[{"i":"MAPLEBEAR INC","s":"Platform / Mktplace","w":9.48,"v":1.01},{"i":"CLEAN HARBORS INC","s":"Industrials","w":6.09,"v":0.65},{"i":"FLOWSERVE CORP","s":"Industrials","w":4.96,"v":0.53},{"i":"JAMES HARDIE INDS PLC","s":"Industrials","w":4.73,"v":0.51},{"i":"REDDIT INC","s":"Platform / Mktplace","w":4.55,"v":0.49},{"i":"MERCADOLIBRE INC","s":"Platform / Mktplace","w":4.22,"v":0.45},{"i":"APPLOVIN CORP","s":"AI / Software","w":4.21,"v":0.45},{"i":"SEA LTD","s":"Platform / Mktplace","w":4.15,"v":0.44},{"i":"KNIGHT-SWIFT TRANSN HLDGS IN","s":"Other","w":3.77,"v":0.4},{"i":"KILROY RLTY CORP","s":"Other","w":3.63,"v":0.39}],"Dragoneer":[{"i":"COUPANG INC","s":"Platform / Mktplace","w":11.1,"v":0.51},{"i":"NVIDIA CORPORATION","s":"AI / Semis","w":10.77,"v":0.49},{"i":"GLOBAL E ONLINE LTD","s":"Platform / Mktplace","w":9.74,"v":0.45},{"i":"CARVANA CO","s":"Platform / Mktplace","w":9.01,"v":0.41},{"i":"DAYFORCE INC","s":"Enterprise","w":7.16,"v":0.33},{"i":"BLOCK INC","s":"Other","w":7.07,"v":0.32},{"i":"MERCADOLIBRE INC","s":"Platform / Mktplace","w":7.04,"v":0.32},{"i":"KLARNA GROUP PLC","s":"Other","w":5.22,"v":0.24},{"i":"CHIME FINL INC","s":"Fintech","w":4.69,"v":0.22},{"i":"PDD HOLDINGS INC","s":"Other","w":4.54,"v":0.21}],"Durable Capital":[{"i":"RBC BEARINGS INC","s":"Industrials","w":9.95,"v":1.05},{"i":"DOORDASH INC","s":"Platform / Mktplace","w":7.67,"v":0.81},{"i":"MERCADOLIBRE INC","s":"Platform / Mktplace","w":5.87,"v":0.62},{"i":"COUPANG INC","s":"Platform / Mktplace","w":5.46,"v":0.58},{"i":"API GROUP CORP","s":"Industrials","w":5.44,"v":0.57},{"i":"XPO INC","s":"Other","w":5.08,"v":0.54},{"i":"COLLIERS INTL GROUP INC","s":"Other","w":4.69,"v":0.5},{"i":"SHIFT4 PMTS INC","s":"Other","w":3.94,"v":0.42},{"i":"CARVANA CO","s":"Platform / Mktplace","w":3.69,"v":0.39},{"i":"FERGUSON ENTERPRISES INC","s":"Other","w":3.29,"v":0.35}],"Light Street":[{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":12.55,"v":0.08},{"i":"CHIME FINL INC","s":"Fintech","w":10.5,"v":0.07},{"i":"NVIDIA CORPORATION","s":"AI / Semis","w":9.76,"v":0.06},{"i":"BROADCOM INC","s":"AI / Semis","w":7.66,"v":0.05},{"i":"BILL HOLDINGS INC","s":"Cloud / SaaS","w":7.37,"v":0.05},{"i":"ADVANCED MICRO DEVICES INC","s":"AI / Semis","w":7.23,"v":0.05},{"i":"ALPHABET INC","s":"Mega-Cap Tech","w":6.48,"v":0.04},{"i":"GITLAB INC","s":"Other","w":6.12,"v":0.04},{"i":"JFROG LTD","s":"Other","w":4.44,"v":0.03},{"i":"CONFLUENT INC","s":"Cloud / SaaS","w":4.23,"v":0.03}],"Lone Pine":[{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":6.82,"v":0.93},{"i":"VISTRA CORP","s":"Energy / Infra","w":6.18,"v":0.84},{"i":"CARVANA CO","s":"Platform / Mktplace","w":5.52,"v":0.75},{"i":"LPL FINL HLDGS INC","s":"Fintech","w":5.44,"v":0.74},{"i":"BROOKFIELD CORP","s":"Financials","w":5.37,"v":0.73},{"i":"ASML HOLDING N V","s":"AI / Semis","w":4.76,"v":0.65},{"i":"KKR & CO INC","s":"Other","w":4.68,"v":0.64},{"i":"BROADCOM INC","s":"AI / Semis","w":4.4,"v":0.6},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","w":4.38,"v":0.6},{"i":"DOORDASH INC","s":"Platform / Mktplace","w":4.21,"v":0.57}],"Tiger Global":[{"i":"ALPHABET INC","s":"Mega-Cap Tech","w":11.2,"v":3.33},{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","w":8.92,"v":2.65},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","w":7.78,"v":2.31},{"i":"NVIDIA CORPORATION","s":"AI / Semis","w":6.91,"v":2.05},{"i":"SEA LTD","s":"Platform / Mktplace","w":6.62,"v":1.97},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","w":6.11,"v":1.82},{"i":"TAKE-TWO INTERACTIVE SOFTWAR","s":"Other","w":5.03,"v":1.5},{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":3.81,"v":1.13},{"i":"BROADCOM INC","s":"AI / Semis","w":3.35,"v":1.0},{"i":"APOLLO GLOBAL MGMT INC","s":"Other","w":3.03,"v":0.9}],"Viking Global":[{"i":"MICROSOFT CORP","s":"Mega-Cap Tech","w":4.13,"v":1.56},{"i":"PNC FINL SVCS GROUP INC","s":"Fintech","w":4.04,"v":1.52},{"i":"TAIWAN SEMICONDUCTOR MFG LTD","s":"AI / Semis","w":3.96,"v":1.49},{"i":"VISA INC","s":"Fintech","w":3.71,"v":1.4},{"i":"SCHWAB CHARLES CORP","s":"Fintech","w":3.68,"v":1.39},{"i":"DISNEY WALT CO","s":"Media / Consumer","w":3.38,"v":1.27},{"i":"AIR PRODS & CHEMS INC","s":"Other","w":3.14,"v":1.18},{"i":"MCDONALDS CORP","s":"Other","w":2.94,"v":1.11},{"i":"BRIDGEBIO PHARMA INC","s":"Other","w":2.92,"v":1.1},{"i":"FORTIVE CORP","s":"Other","w":2.82,"v":1.06}],"Whale Rock":[{"i":"ALPHABET INC","s":"Mega-Cap Tech","w":8.41,"v":0.66},{"i":"CELESTICA INC","s":"AI / Semis","w":7.12,"v":0.56},{"i":"APPLOVIN CORP","s":"AI / Software","w":6.97,"v":0.54},{"i":"CARVANA CO","s":"Platform / Mktplace","w":5.78,"v":0.45},{"i":"AMAZON COM INC","s":"Mega-Cap Tech","w":5.48,"v":0.43},{"i":"BROADCOM INC","s":"AI / Semis","w":4.57,"v":0.36},{"i":"ROBLOX CORP","s":"Other","w":4.25,"v":0.33},{"i":"JFROG LTD","s":"Other","w":4.23,"v":0.33},{"i":"META PLATFORMS INC","s":"Mega-Cap Tech","w":3.96,"v":0.31},{"i":"TTM TECHNOLOGIES INC","s":"Other","w":3.77,"v":0.3}]}};
+
+const SC={"AI / Semis":"#f59e0b","Mega-Cap Tech":"#3b82f6","Cloud / SaaS":"#8b5cf6","AI Infra":"#ec4899","AI / Software":"#f97316","Platform / Mktplace":"#10b981","Fintech":"#06b6d4","Energy / Infra":"#14b8a6","Energy / EV":"#14b8a6","Healthcare":"#ef4444","Industrials":"#6b7280","Enterprise":"#8b5cf6","Financials":"#3b82f6","Software":"#8b5cf6","Media / Consumer":"#f97316","Consumer":"#f97316","Other":"#555"};
+function sc(s){return SC[s]||"#555"}
+function fb(n){return n>=1?`$${n.toFixed(1)}B`:n>=0.01?`$${(n*1000).toFixed(0)}M`:`$${(n*1000).toFixed(1)}M`}
+function stag(s){const c=sc(s);return `<span class="tag" style="background:${c}18;color:${c}">${s}</span>`}
+
+// KPIs
+const totalAUM=D.m.aum;
+const topCon=D.con[0];
+const topConv=D.cv[0];
+const topBuy=D.buys[0];
+document.getElementById('kpis').innerHTML=`<div class="kpi">
+${[{l:'Funds Tracked',v:D.m.nf,s:'Elite AI/tech hedge funds'},{l:'Tracked AUM',v:fb(totalAUM),s:'Across all parsed funds'},{l:'Most Held',v:shortName(topCon.i),s:topCon.fc+' of '+D.m.nf+' funds hold it'},{l:'Top Conviction',v:shortName(topConv.i),s:'Score: '+topConv.cs},{l:'Top Buy Signal',v:shortName(topBuy.i),s:'Net +'+topBuy.net+' funds adding'}].map(k=>`<div class="kc"><div class="kl">${k.l}</div><div class="kv">${k.v}</div><div class="ks">${k.s}</div></div>`).join('')}
+</div>`;
+
+function shortName(n){
+const m={'AMAZON COM INC':'AMZN','TAIWAN SEMICONDUCTOR MFG LTD':'TSM','NVIDIA CORPORATION':'NVDA','BROADCOM INC':'AVGO','ALPHABET INC':'GOOGL','MICROSOFT CORP':'MSFT','META PLATFORMS INC':'META','APPLOVIN CORP':'APP','CARVANA CO':'CVNA','MERCADOLIBRE INC':'MELI','DOORDASH INC':'DASH','REDDIT INC':'RDDT','COUPANG INC':'CPNG','UBER TECHNOLOGIES INC':'UBER','SNOWFLAKE INC':'SNOW','SPOTIFY TECHNOLOGY S A':'SPOT','CONSTELLATION ENERGY CORP':'CEG','MEDLINE INC':'MD','CLEAN HARBORS INC':'CLH','GE VERNOVA INC':'GEV','NU HLDGS LTD':'NU','CHIME FINL INC':'CHIME','NAVAN INC':'NAVAN','WEALTHFRONT CORP':'WF','VISA INC':'V','COREWEAVE INC':'CRWV','SERVICENOW INC':'NOW','SHOPIFY INC':'SHOP','TESLA INC':'TSLA','MAPLEBEAR INC':'CART','SEA LTD':'SE'};
+return m[n]||n.split(' ')[0]}
+
+// Tabs
+const tabDefs=[{k:'overview',l:'Overview'},{k:'consensus',l:'Consensus'},{k:'conviction',l:'Conviction'},{k:'moves',l:'Q/Q Flows'},{k:'funds',l:'Fund Drilldown'}];
+let curTab='overview';
+function renderTabs(){
+document.getElementById('tabs').innerHTML=tabDefs.map(t=>`<button class="tab${curTab===t.k?' on':''}" onclick="setTab('${t.k}')">${t.l}</button>`).join('');
+}
+function setTab(t){curTab=t;renderTabs();renderContent();}
+renderTabs();
+
+function renderContent(){
+const el=document.getElementById('content');
+const bl=document.getElementById('bottomline');
+if(curTab==='overview') renderOverview(el,bl);
+else if(curTab==='consensus') renderConsensus(el,bl);
+else if(curTab==='conviction') renderConviction(el,bl);
+else if(curTab==='moves') renderMoves(el,bl);
+else if(curTab==='funds') renderFunds(el,bl);
+}
+
+function renderOverview(el,bl){
+// Fund cards + sector breakdown + thesis
+el.innerHTML=`<div class="fade">
+<div class="card"><div class="cl">Fund Universe — Q4 2025</div>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr>
+<th style="text-align:left">Fund</th><th style="text-align:right">Q4 AUM</th><th style="text-align:right">Q3 AUM</th><th style="text-align:right">Δ</th><th style="text-align:right">Positions</th>
+</tr></thead><tbody>${D.fs.sort((a,b)=>b.q4_aum-a.q4_aum).map(f=>`<tr>
+<td style="color:#fff;font-weight:600">${f.name}</td>
+<td style="text-align:right">${fb(f.q4_aum)}</td>
+<td style="text-align:right;color:var(--ts)">${fb(f.q3_aum)}</td>
+<td style="text-align:right;color:${f.chg>=0?'var(--gn)':'var(--rd)'}">${f.chg>=0?'+':''}${f.chg}%</td>
+<td style="text-align:right">${f.q4_pos}</td>
+</tr>`).join('')}</tbody></table></div></div>
+
+<div class="card"><div class="cl">Sector Allocation — Aggregate Across All Funds</div>
+<div style="margin-top:14px">${D.sl.slice(0,12).map(s=>{
+const pct=s.p;const c=sc(s.s);
+return `<div class="sec-bar"><div class="sec-label" style="color:${c}">${s.s}</div><div class="bt"><div class="bf" style="width:${Math.min(pct*2.5,100)}%;background:${c}"></div></div><div class="sec-val">${pct}%</div><div style="font-size:10px;color:var(--tm);width:60px;text-align:right">${fb(s.v)}</div></div>`;
+}).join('')}</div></div>
+
+<div class="card al" style="border-left-color:var(--gd)"><div class="cl" style="color:var(--gd)">Key Findings</div><div class="gs"></div>
+<div class="at">
+<p><strong>AMZN is the most widely held name</strong> — 9 of 11 funds own it. But NVDA has the highest average weight (7.7%) among consensus holdings, meaning funds that own it are making it a top position.</p>
+<p><strong>The biggest cross-fund buy signal is GOOGL</strong> — 4 funds added shares and 1 initiated a new position, with zero trims. Medline (new IPO) was bought by 5 funds as a new position.</p>
+<p><strong>The biggest cross-fund sell signal is APPLOVIN</strong> — 6 funds trimmed and 1 fully exited. META was trimmed by 5 funds and exited by 2. Smart money is taking profits on 2024's biggest winners.</p>
+<p><strong>Sector tilt is heavily AI / Semis + Mega-Cap Tech</strong> — together they represent over 50% of aggregate holdings. Platform/Marketplace is the third-largest bucket, with CVNA and MELI seeing broad accumulation.</p>
+</div></div></div>`;
+bl.innerHTML=`<div class="cl" style="color:var(--gd)">Bottom Line</div><div class="gs"></div><div class="at">
+11 of the sharpest AI/tech funds are converging on a clear thesis: the AI infrastructure buildout (NVDA, TSM, AVGO) is the core trade, mega-cap platforms (AMZN, GOOGL, MSFT) are the safety net, and the next wave of alpha is in platforms that benefit from AI-driven efficiency (CVNA, MELI, DASH). The consensus sell — APP and META trims — suggests the easy money in AI-adjacent momentum names is over. The new buys (Medline, Navan, Wealthfront) point to funds looking for the next cycle beyond pure tech.
+</div>`;
+}
+
+function renderConsensus(el,bl){
+el.innerHTML=`<div class="fade"><div class="card"><div class="cl">Consensus Holdings — Stocks Held by 3+ Funds</div>
+<div style="margin-top:6px;font-size:11px;color:var(--ts);margin-bottom:14px">Ranked by breadth of ownership, then total value</div>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr>
+<th style="text-align:left">#</th><th style="text-align:left">Security</th><th style="text-align:left">Sector</th><th style="text-align:right">Funds</th><th style="text-align:right">Total Value</th><th style="text-align:right">Avg Wt</th><th style="text-align:right">Max Wt</th>
+</tr></thead><tbody>${D.con.map((c,i)=>`<tr>
+<td style="color:var(--tm)">${i+1}</td>
+<td><span style="color:#fff;font-weight:600">${shortName(c.i)}</span><br><span style="font-size:10px;color:var(--tm)">${c.i}</span></td>
+<td>${stag(c.s)}</td>
+<td style="text-align:right;color:#fff;font-weight:600">${c.fc} / ${D.m.nf}</td>
+<td style="text-align:right">${fb(c.v)}</td>
+<td style="text-align:right">${c.aw}%</td>
+<td style="text-align:right;color:var(--gd)">${c.mw}%</td>
+</tr>`).join('')}</tbody></table></div></div></div>`;
+bl.innerHTML=`<div class="cl" style="color:var(--gd)">Consensus Interpretation</div><div class="gs"></div><div class="at">
+The consensus layer reveals the institutional "agreement zone." AMZN at 9/11 funds is the broadest overlap. The AI/Semis cluster (TSM, NVDA, AVGO) appears across 8 funds each. The interesting signal is what's NOT consensus: META is only in 6 funds despite being the second-largest AI capex spender. Funds are differentiating between AI infrastructure providers (broadly held) and AI application companies (more selective).
+</div>`;
+}
+
+function renderConviction(el,bl){
+el.innerHTML=`<div class="fade"><div class="card"><div class="cl">Conviction Leaders — Weighted by Fund Count × Average Portfolio Weight</div>
+<div style="margin-top:6px;font-size:11px;color:var(--ts);margin-bottom:14px">High conviction = many funds holding it at meaningful weight, not just small positions</div>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr>
+<th style="text-align:left">#</th><th style="text-align:left">Security</th><th style="text-align:left">Sector</th><th style="text-align:right">Score</th><th style="text-align:right">Funds</th><th style="text-align:right">Avg Wt</th><th style="text-align:right">Max Wt</th><th style="text-align:right">Value</th>
+</tr></thead><tbody>${D.cv.map((c,i)=>`<tr>
+<td style="color:var(--tm)">${i+1}</td>
+<td><span style="color:#fff;font-weight:600">${shortName(c.i)}</span><br><span style="font-size:10px;color:var(--tm)">${c.i}</span></td>
+<td>${stag(c.s)}</td>
+<td style="text-align:right;color:var(--gd);font-weight:700">${c.cs}</td>
+<td style="text-align:right">${c.fc}</td>
+<td style="text-align:right">${c.aw}%</td>
+<td style="text-align:right;font-weight:600">${c.mw}%</td>
+<td style="text-align:right">${fb(c.v)}</td>
+</tr>`).join('')}</tbody></table></div></div></div>`;
+bl.innerHTML=`<div class="cl" style="color:var(--gd)">Conviction Interpretation</div><div class="gs"></div><div class="at">
+NVDA's conviction score (61.6) dwarfs everything else — it's not just widely held, it's held at massive weight. Altimeter has it at 22.7%, Light Street at 9.8%, Dragoneer at 10.8%. The gap between NVDA and #2 (TSM at 45.2) tells you this is the single highest-conviction bet across the AI hedge fund universe. META's conviction score (39.0) is surprisingly close to MSFT (35.6) despite being in fewer funds — the funds that hold META hold it at very high weight (Altimeter at 18.3%).
+</div>`;
+}
+
+function renderMoves(el,bl){
+el.innerHTML=`<div class="fade"><div class="mg">
+<div class="card"><div class="cl" style="color:var(--gn)">Buy Signals — Q3 → Q4</div>
+<div style="margin-top:6px;font-size:10px;color:var(--ts);margin-bottom:12px">Stocks where multiple funds added or initiated positions</div>
+${D.buys.map(m=>`<div class="mv">
+<div style="display:flex;align-items:center;gap:8px">
+<span class="tag tg">+${m.net}</span>
+<strong style="color:#fff">${shortName(m.i)}</strong>
+<span style="font-size:10px;color:${sc(m.s)}">${m.s}</span>
+</div>
+<div style="text-align:right;font-size:11px">
+<span style="color:var(--gn)">${m.a?m.a+' add':''}${m.a&&m.n?' ':''}${m.n?m.n+' new':''}</span>
+${m.t?'<span style="color:var(--rd);margin-left:6px">'+m.t+' trim</span>':''}
+</div>
+</div>`).join('')}</div>
+
+<div class="card"><div class="cl" style="color:var(--rd)">Sell Signals — Q3 → Q4</div>
+<div style="margin-top:6px;font-size:10px;color:var(--ts);margin-bottom:12px">Stocks where multiple funds trimmed or exited positions</div>
+${D.sells.map(m=>`<div class="mv">
+<div style="display:flex;align-items:center;gap:8px">
+<span class="tag tr">${m.net}</span>
+<strong style="color:#fff">${shortName(m.i)}</strong>
+<span style="font-size:10px;color:${sc(m.s)}">${m.s}</span>
+</div>
+<div style="text-align:right;font-size:11px">
+<span style="color:var(--rd)">${m.t?m.t+' trim':''}${m.t&&m.e?' ':''}${m.e?m.e+' exit':''}</span>
+${m.a?'<span style="color:var(--gn);margin-left:6px">'+m.a+' add</span>':''}
+</div>
+</div>`).join('')}</div>
+</div></div>`;
+bl.innerHTML=`<div class="cl" style="color:var(--gd)">Flow Interpretation</div><div class="gs"></div><div class="at">
+<p><strong>The biggest conviction buy across all funds is GOOGL</strong> — pure accumulation with zero selling. MELI is the second-strongest signal with 5 funds adding. Both suggest institutional positioning for 2025's next leg.</p>
+<p><strong>The sell side is dominated by profit-taking in momentum names.</strong> APP (AppLovin) saw 6 trims and 1 exit — the most aggressive cross-fund sell. META trims from 5 funds + 2 exits is the most dollar-significant rotation. Funds are de-risking from names that ran hardest in 2024.</p>
+<p><strong>Medline, Navan, and Wealthfront</strong> — all new IPO/pre-IPO positions appearing across 3-5 funds simultaneously. This is the "next generation" bet: healthcare logistics, corporate travel, and consumer fintech.</p>
+</div>`;
+}
+
+let selectedFund=D.fs[0].name;
+function renderFunds(el,bl){
+const ft=D.ft[selectedFund]||[];
+const fs=D.fs.find(f=>f.name===selectedFund);
+el.innerHTML=`<div class="fade">
+<div class="fg">${D.fs.sort((a,b)=>b.q4_aum-a.q4_aum).map(f=>`<div class="fund-card${f.name===selectedFund?' on':''}" onclick="selectedFund='${f.name}';renderContent()">
+<div class="fn">${f.name}</div>
+<div class="fm">${fb(f.q4_aum)} · ${f.q4_pos} pos</div>
+</div>`).join('')}</div>
+
+<div class="card"><div class="cl">${selectedFund} — Top 10 Holdings (Q4 2025)</div>
+<div style="margin-top:4px;font-size:11px;color:var(--ts);margin-bottom:12px">${fb(fs.q4_aum)} AUM · ${fs.q4_pos} positions · ${fs.chg>=0?'+':''}${fs.chg}% from Q3</div>
+<div style="overflow-x:auto"><table class="tbl"><thead><tr>
+<th style="text-align:left">#</th><th style="text-align:left">Security</th><th style="text-align:left">Sector</th><th style="text-align:right">Weight</th><th style="text-align:right">Value</th>
+</tr></thead><tbody>${ft.map((h,i)=>`<tr>
+<td style="color:var(--tm)">${i+1}</td>
+<td style="color:#fff;font-weight:${h.w>=5?700:400}">${shortName(h.i)}<br><span style="font-size:10px;color:var(--tm)">${h.i}</span></td>
+<td>${stag(h.s)}</td>
+<td style="text-align:right;font-weight:600">${h.w}%</td>
+<td style="text-align:right">${fb(h.v)}</td>
+</tr>`).join('')}</tbody></table></div></div></div>`;
+bl.innerHTML=`<div class="cl" style="color:var(--gd)">Fund Profile</div><div class="gs"></div><div class="at">
+<strong>${selectedFund}</strong> manages ${fb(fs.q4_aum)} across ${fs.q4_pos} positions. AUM moved ${fs.chg>=0?'+':''}${fs.chg}% from Q3 to Q4. Top holding is <strong>${shortName(ft[0]?.i||'')}</strong> at ${ft[0]?.w||0}% of the portfolio.
+</div>`;
+}
+
+renderContent();
+</script>
+</body>
+</html>
